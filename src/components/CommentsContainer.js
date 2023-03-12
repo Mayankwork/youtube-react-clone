@@ -57,8 +57,8 @@ const commentsData = [
 const CommentsList = ({comments})=>{
   
     return comments.map((comment,index)=> (
-        <div className=" border-2 m-1 p-1">
-        <Comment key={index} data={comment}/>
+        <div key={index}  className=" border-2 m-1 p-1">
+        <Comment data={comment}/>
         <div className="pl-8">
         <CommentsList comments={comment.replies}/>
         </div>
